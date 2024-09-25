@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speech Recognition Tutorial</title>
+<style>
+    body {
+        font-family: Roboto, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    textarea, input {
+        width: 80%;
+        margin-top: 20px;
+    }
+    textarea {
+        height: 150px; /* Increased height for the textarea */
+    }
+    #logo {
+        width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<img id="logo" src="sb-logo.png" alt="Logo" />
+
+<h1>GRAIN 2024 | Speech Technology</h1>
+
+<input id="languageCode" type="text" placeholder="Language code, e.g., eng, swh, lug." />
+<textarea id="inputTextArea" placeholder="Paste your tab-separated values here..." style="height: 250px"></textarea>
+<div>
+    <button id="loadTextButton">Load Text</button>
+    <button id="prevButton" style="display:none" disabled>Previous</button>
+    <button id="nextButton" style="display:none" disabled>Next</button>
+</div>
+<p id="progressIndicator"></p>
+<p id="textToRead" style="font-size: 18px"></p>
+<div>
+    <button id="recordButton" disabled>Record</button>
+    <button id="stopButton" disabled>Stop</button>
+</div>
+<button id="downloadAllButton" style="display: none;">Download All Recordings</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
